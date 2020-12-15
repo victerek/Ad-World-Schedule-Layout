@@ -197,6 +197,7 @@ table {
 	padding: 0.8em 2.1em;
 	box-shadow: rgba(255, 1, 1, 0.4) 0px 10px 20px;
 	position: relative;
+	color: white;
 }
 
 .btn-primary::after {
@@ -279,3 +280,119 @@ table {
 }
 
 /* end of Schedule hero section */
+
+/* Schedule days section */
+
+.schedule {
+	width: 75%;
+	display: grid;
+	align-content: center;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr;
+	background-color: #f7f2f2;
+}
+
+
+.schedule .day-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 1em;
+	grid-auto-flow: column;
+	background-color: crimson;
+	width: 90%;
+	font-size: 0.9em;
+}
+
+.schedule .time-zone {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	text-align: center;
+	margin-right: 1em;
+	font-weight: bold;
+}
+
+.schedule .time-zone span {
+	font-weight: normal;
+}
+
+.day-wrapper a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+	padding: 1em;
+	border: 1px solid #fbcfcf;
+	font-weight: bold;
+	box-shadow: 5px 2px 2px #fbcfcf;
+}
+
+.day-wrapper a span {
+	display: block;
+	margin-top: 0.2em;
+	font-weight: normal;
+}
+
+.day-wrapper a:nth-child(2), a:nth-child(3) {
+	background: white;
+	color:#443030;
+	font-weight: normal;
+}
+
+
+.schedule-items {
+	display: grid;
+}
+
+/* end of Schedule days section */
+
+/* Schedule items section */
+
+.schedule-items {
+	width: 75%;
+	display: grid;
+	align-content: center;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.schedule-items h2 {
+	text-align: center;
+	margin: 1.5em;
+	padding: 1em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.schedule-items .talk-item {
+	margin: 0.5em;
+	padding: 0.7em;
+	border-right:  4px solid #181A55;
+	border-bottom: 2px solid #f7f2f2;
+	border-left:   4px solid  #181A55;
+} 
+
+.talk-item h4 {
+	width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+}
+
+.talk-item span {
+	display: block;
+}
+
+.talk-item .schedule-tag {
+	display: inline;
+	background-color: rgb(173, 173, 224);
+	color: #181A55;
+}
+
+.talk-item .speaker {
+	display: inline;
+}
+
+
+/* end of Schedule items section */
