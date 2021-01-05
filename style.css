@@ -372,27 +372,44 @@ table {
 	border-left:   4px solid  #181A55;
 } 
 
+.schedule-items .talk-info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 5px;
+}
+
+.talk-item span {
+	display: inline;
+}
+
 .talk-item h4 {
-	width: 300px;
+	width: 250px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	position: relative;
-}
-
-.talk-item span {
-	display: block;
+	display: inline-block;
+	font-weight: bold;
+	color: #181A55;
 }
 
 .talk-item .schedule-tag {
-	display: inline;
-	background-color: rgb(173, 173, 224);
 	color: #181A55;
+}
+
+.talk-item .speaker-discipline {
+	background-color: rgb(173, 173, 224);
+	font-weight: bold;
 }
 
 .talk-item .speaker {
 	display: inline;
 }
 
+.talk-item img {
+	margin-top: 1em;
+	width: 50px;
+	height: 50px;
+}
 
 /* end of Schedule items section */
