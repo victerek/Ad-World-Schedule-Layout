@@ -510,3 +510,30 @@ table {
 }
 
 /* end of Newsletter section */
+
+/* Footer section */
+
+.social-links .logo {
+	align-items: center;
+	display: flex;
+}
+
+.social-links .a {
+	text-decoration: none;
+	color: white;	
+}
+
+.social-links .title {
+	display: block;
+	letter-spacing: 0.2em;
+	color: rgb(24, 26, 85);
+	text-transform: uppercase;
+	font-size: 1.1em;
+
+}
+
+.social-links .tittle strong {
+	font-weight: 900;
+}
+
+/* end of Footer section */
