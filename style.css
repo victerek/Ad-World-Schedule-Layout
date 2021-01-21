@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,31 +92,56 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 /* end of Reset CSS */
+
+:root {
+	--main-navy-blue: rgb(24, 26, 85);
+	--btn-primary-crimson: rgb(249, 66, 75);
+	--schedule-navy-blue: #181A55;
+}
 
 /* Header */
 
@@ -60,7 +153,7 @@ table {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-	background: rgb(24, 26, 85) none repeat scroll 0% 0%;
+	background: var(--main-navy-blue) none repeat scroll 0% 0%;
 	position: relative;
 	z-index: 1000;
 }
@@ -116,7 +209,7 @@ table {
 	width: 960px;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-family: "Source Sans Pro",sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	letter-spacing: 0.09em;
 	font-size: 1em;
 	position: relative;
@@ -143,7 +236,7 @@ table {
 	opacity: 0;
 	display: flex;
 	flex-direction: column;
-	background: rgb(24, 26, 85) none repeat scroll 0% 0%;
+	background: var(--main-navy-blue) none repeat scroll 0% 0%;
 	padding: 20px 20px 0px;
 	width: 180px;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
@@ -157,7 +250,7 @@ table {
 }
 
 .container .link .dropdown a:hover {
-	color: rgb(249, 66, 75);
+	color: var(--btn-primary-crimson);
 }
 
 .container .link:hover .dropdown {
@@ -174,14 +267,14 @@ table {
 	width: 0;
 	bottom: 5px;
 	transition: all 0.2s;
-	background: rgb(229, 39, 48) none repeat scroll 0% 0%;
+	background: var(--btn-primary-crimson) none repeat scroll 0% 0%;
 }
 
 .container .link:hover::before {
 	width: 100%;
 }
 
-.container .links > * {
+.container .links>* {
 	margin: 1.5em;
 }
 
@@ -190,7 +283,7 @@ table {
 }
 
 .container .links .btn-primary {
-	background: rgb(249, 66, 75) none repeat scroll 0% 0%;
+	background: var(--btn-primary-crimson) none repeat scroll 0% 0%;
 	border-radius: 5px;
 	font-weight: 700;
 	font-size: 1em;
@@ -204,7 +297,7 @@ table {
 	width: 0px;
 	height: 100%;
 	position: absolute;
-	background: rgb(229, 39, 48) none repeat scroll 0% 0%;
+	background: var(--btn-primary-crimson) none repeat scroll 0% 0%;
 	display: block;
 	transition: all 0.2s ease-in-out 0s;
 	z-index: 0;
@@ -229,7 +322,7 @@ table {
 .schedule-hero {
 	width: 100vw;
 	height: 270px;
-	background: rgb(24, 26, 85) none repeat scroll 0% 0%;
+	background: var(--main-navy-blue) none repeat scroll 0% 0%;
 	display: grid;
 	justify-content: center;
 	align-content: center;
@@ -295,7 +388,7 @@ table {
 	grid-template-columns: repeat(3, 1fr);
 	margin: 1em;
 	grid-auto-flow: column;
-	background-color: crimson;
+	background-color: var(--btn-primary-crimson);
 	width: 90%;
 	font-size: 0.9em;
 }
@@ -330,9 +423,10 @@ table {
 	font-weight: normal;
 }
 
-.day-wrapper a:nth-child(2), a:nth-child(3) {
+.day-wrapper a:nth-child(2),
+a:nth-child(3) {
 	background: white;
-	color:#443030;
+	color: #443030;
 	font-weight: normal;
 }
 
@@ -359,10 +453,10 @@ table {
 .schedule-items .talk-item {
 	margin: 0.5em;
 	padding: 0.7em;
-	border-right:  4px solid #181A55;
+	border-right: 4px solid var(--schedule-navy-blue);
 	border-bottom: 2px solid #f7f2f2;
-	border-left:   4px solid  #181A55;
-} 
+	border-left: 4px solid var(--schedule-navy-blue);
+}
 
 .schedule-items .talk-info {
 	display: grid;
@@ -382,11 +476,11 @@ table {
 	position: relative;
 	display: inline-block;
 	font-weight: bold;
-	color: #181A55;
+	color: var(--schedule-navy-blue);
 }
 
 .talk-item .schedule-tag {
-	color: #181A55;
+	color: var(--schedule-navy-blue);
 	margin-top: 0.2em;
 }
 
@@ -418,7 +512,7 @@ table {
 	align-content: center;
 	margin: 3em auto;
 	position: relative;
-	background: rgb(24, 26, 85) none repeat scroll 0% 0%;
+	background: var(--main-navy-blue) none repeat scroll 0% 0%;
 	font-size: 1.3em;
 }
 
@@ -451,7 +545,7 @@ table {
 	color: white;
 	font-size: 2em;
 	font-weight: bold;
-	font-family: "Source Sans Pro",sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	margin: 0.3em auto;
 	text-transform: uppercase;
 }
@@ -478,12 +572,12 @@ table {
 	border-radius: 4px;
 	outline: 0;
 	font-size: 0.9em;
-	font-family: "Source Sans Pro",sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .text-field:focus {
 	border-color: #0f7ef1;
-  }
+}
 
 .newsletter .form-field input[name="email"] {
 	grid-column: span 3;
@@ -496,7 +590,7 @@ table {
 	text-transform: uppercase;
 	font-family: initial;
 	font-size: 0.9em;
-	background-color: crimson;
+	background-color: var(--btn-primary-crimson);
 	color: white;
 	font-weight: bold;
 	outline: none;
@@ -520,13 +614,13 @@ table {
 
 .social-links .a {
 	text-decoration: none;
-	color: white;	
+	color: white;
 }
 
 .social-links .title {
 	display: block;
 	letter-spacing: 0.2em;
-	color: rgb(24, 26, 85);
+	color: var(--main-navy-blue);
 	text-transform: uppercase;
 	font-size: 1.1em;
 
@@ -535,5 +629,26 @@ table {
 .social-links .tittle strong {
 	font-weight: 900;
 }
+
+.social-links small {
+	display: block;
+}
+
+.social-links .footer-links {
+	display: block;
+	width: 60vw;
+	margin-top: 1em;
+}
+
+.social-links .footer-links a {
+	color: var(--main-navy-blue);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.social-links .footer-link-terms, .footer-link-privacy, .footer-link-contact {
+	display: inline;
+}
+
 
 /* end of Footer section */
