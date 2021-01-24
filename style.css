@@ -722,3 +722,31 @@ a:nth-child(3) {
 
 
 /* end of Footer section */
+
+/* Responsiveness */
+
+@media screen and (max-width: 767px) {
+	.container {
+		width: 300px;
+	}
+	.container .logo {
+		display: grid;
+	}
+	.container .adworld-logo {
+		display: grid;
+		justify-content: center;
+	}
+	.container .title {
+		width: 100%;
+	}
+	.container .title small {
+		display: inline;
+	}
+	.container .links {
+		width: 550px;
+		visibility: hidden;
+		display: none;
+	}
+}
+
+/* end Responsiveness */
