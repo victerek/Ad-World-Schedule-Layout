@@ -142,7 +142,7 @@ table {
 	--main-navy-blue: rgb(24, 26, 85);
 	--btn-primary-crimson: rgb(249, 66, 75);
 	--schedule-navy-blue: #181A55;
-	--schedule-light-white: #f7f2f2;
+	--schedule-light-white: #fdfbfb;
 	/* font weight */
 	--medium-bold-font: 700;
 	--heavy-bold-font: 900;
@@ -243,7 +243,7 @@ table {
 	flex-direction: column;
 	background: var(--main-navy-blue) none repeat scroll 0% 0%;
 	padding: 20px 20px 0px;
-	width: 180px;
+	width: 120%;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
 	margin-top: 1em;
 	border-radius: 5px;
@@ -254,15 +254,33 @@ table {
 	display: flex;
 }
 
+.container .link .dropdown a:nth-child(3) {
+	padding: 0.5em 0.5em;
+}
+
 .container .link .dropdown a:hover {
 	color: var(--btn-primary-crimson);
 }
 
-.container .link:hover .dropdown {
+.container .link .dropdown a:focus-visible {
+	border: none;
+}
+
+.container .link:hover .dropdown{
 	visibility: visible;
 	opacity: 1;
 	padding: 1em;
 }
+
+.container .link:active .dropdown {
+	visibility: visible;
+	opacity: 1;
+}
+
+.container .link:focus-visible {
+	border: none;
+}
+
 
 .container .link::before {
 	position: absolute;
@@ -270,10 +288,9 @@ table {
 	left: 0px;
 	height: 3px;
 	width: 0;
-	bottom: 5px;
-	transition: all 0.2s;
+	bottom: -5px;
+	transition: all 0.3s;
 	background: var(--btn-primary-crimson) none repeat scroll 0% 0%;
-	overflow: hidden;
 }
 
 .container .link:hover::before {
@@ -433,9 +450,9 @@ table {
 
 .day-wrapper a:nth-child(2),
 a:nth-child(3) {
-	background: white;
+	background: var(--schedule-light-white);
 	color: #443030;
-	font-weight: normal;
+	font-weight: var(--medium-bold-font);
 }
 
 /* end of Schedule days section */
@@ -615,6 +632,14 @@ a:nth-child(3) {
 
 /* Footer section */
 
+.all-links {
+	margin-bottom: 3em;
+}
+
+.all-links .adworld-logo {
+	margin-left: 1em;
+}
+
 .all-links .logo {
 	align-items: center;
 	display: flex;
@@ -676,10 +701,6 @@ a:nth-child(3) {
 	grid-template-columns: 4fr 1fr;
 }
 
-.footer-link-contact {
-	grid-template-columns: 1fr 1fr;
-}
-
 .footer-links span {
 	display: grid;
 	justify-content: center;
@@ -688,13 +709,13 @@ a:nth-child(3) {
 .footer-social-links {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	width: 40vw;
-	margin-left: 5em;
+	width: 85%;
+	border: 1px solid #e3d8d8;
+	padding: 1em;
 }
 
 .footer-social-links .fab {
-	font-size: 30px;
-	width: 50px;
+	font-size: 2em;
 	text-align: center;
 	text-decoration: none;
 }
