@@ -138,9 +138,14 @@ table {
 /* end of Reset CSS */
 
 :root {
+	/* colors */
 	--main-navy-blue: rgb(24, 26, 85);
 	--btn-primary-crimson: rgb(249, 66, 75);
 	--schedule-navy-blue: #181A55;
+	--schedule-light-white: #f7f2f2;
+	/* font weight */
+	--medium-bold-font: 700;
+	--heavy-bold-font: 900;
 }
 
 /* Header */
@@ -180,7 +185,7 @@ table {
 .container .logo {
 	align-items: center;
 	display: flex;
-	color: rgb(255, 255, 255);
+	color: white;
 }
 
 .container .title {
@@ -192,7 +197,7 @@ table {
 }
 
 .container .title strong {
-	font-weight: 900;
+	font-weight: var(--heavy-bold-font);
 }
 
 .container .title small {
@@ -200,7 +205,7 @@ table {
 	text-transform: uppercase;
 	display: block;
 	letter-spacing: 0;
-	font-weight: 900;
+	font-weight: var(--heavy-bold-font);
 }
 
 .container .links {
@@ -220,12 +225,12 @@ table {
 	line-height: 1.4;
 	text-transform: uppercase;
 	margin: 0 0.2em;
-	font-weight: 900;
+	font-weight: var(--heavy-bold-font);
 	padding: 0px;
 	position: relative;
 	font-size: 1em;
-	color: rgb(255, 255, 255);
-	background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+	color: white;
+	background: transparent none repeat scroll 0% 0%;
 	border: none;
 	cursor: pointer;
 }
@@ -268,6 +273,7 @@ table {
 	bottom: 5px;
 	transition: all 0.2s;
 	background: var(--btn-primary-crimson) none repeat scroll 0% 0%;
+	overflow: hidden;
 }
 
 .container .link:hover::before {
@@ -285,7 +291,7 @@ table {
 .container .links .btn-primary {
 	background: var(--btn-primary-crimson) none repeat scroll 0% 0%;
 	border-radius: 5px;
-	font-weight: 700;
+	font-weight: var(--medium-bold-font);
 	font-size: 1em;
 	padding: 0.8em 2.1em;
 	box-shadow: rgba(255, 1, 1, 0.4) 0px 10px 20px;
@@ -303,6 +309,7 @@ table {
 	z-index: 0;
 	content: "";
 	border-radius: 5px;
+	overflow: hidden;
 }
 
 .btn-primary:hover::after {
@@ -320,7 +327,6 @@ table {
 /* Schedule hero section */
 
 .schedule-hero {
-	width: 100vw;
 	height: 270px;
 	background: var(--main-navy-blue) none repeat scroll 0% 0%;
 	display: grid;
@@ -331,11 +337,12 @@ table {
 }
 
 .schedule-hero::before {
-	background: rgba(0, 0, 0, 0) url("https://adworldconference.com/static/media/pattern-left.8a806302.svg") no-repeat scroll left center / contain;
+	background: transparent url("https://adworldconference.com/static/media/pattern-left.8a806302.svg") no-repeat scroll left center / contain;
 	content: "";
 	height: 100%;
 	width: 270px;
 	position: absolute;
+	overflow: hidden;
 }
 
 .schedule-hero::after {
@@ -345,7 +352,8 @@ table {
 	right: 0px;
 	top: 0px;
 	content: "";
-	background: rgba(0, 0, 0, 0) url("https://adworldconference.com/static/media/pattern-right.d45de2c6.svg") no-repeat scroll right center / contain;
+	background: transparent url("https://adworldconference.com/static/media/pattern-right.d45de2c6.svg") no-repeat scroll right center / contain;
+	overflow: hidden;
 }
 
 .schedule-hero article {
@@ -379,7 +387,7 @@ table {
 	align-content: center;
 	margin: 0 auto;
 	grid-template-columns: 1fr 1fr;
-	background-color: #f7f2f2;
+	background-color: var(--schedule-light-white);
 }
 
 
@@ -454,7 +462,7 @@ a:nth-child(3) {
 	margin: 0.5em;
 	padding: 0.7em;
 	border-right: 4px solid var(--schedule-navy-blue);
-	border-bottom: 2px solid #f7f2f2;
+	border-bottom: 2px solid var(--schedule-light-white);
 	border-left: 4px solid var(--schedule-navy-blue);
 }
 
@@ -499,8 +507,6 @@ a:nth-child(3) {
 	height: 50px;
 }
 
-
-
 /* end of Schedule items section */
 
 /* Newsletter section */
@@ -519,22 +525,24 @@ a:nth-child(3) {
 .newsletter::before {
 	left: -11px;
 	bottom: -28px;
-	background: rgba(0, 0, 0, 0) url("./pattern-left-newsletter.svg") no-repeat scroll left top / contain;
+	background: transparent url("./pattern-left-newsletter.svg") no-repeat scroll left top / contain;
 	display: block;
 	position: absolute;
 	height: 350px;
 	width: 300px;
 	content: "";
+	overflow: hidden;
 }
 
 .newsletter::after {
-	right: -11px;
-	background: rgba(0, 0, 0, 0) url("./pattern-right-newsletter.svg") no-repeat scroll left top / contain;
+	right: 1px;
+	background: transparent url("./pattern-right-newsletter.svg") no-repeat scroll left top / contain;
 	display: block;
 	position: absolute;
 	height: 350px;
 	width: 300px;
 	content: "";
+	overflow: hidden;
 }
 
 .newsletter article {
@@ -596,7 +604,7 @@ a:nth-child(3) {
 	outline: none;
 	border-radius: 4px;
 	border: 2px none #ddd;
-	box-shadow: 1px 1px 3px #645d5d;
+	box-shadow: 1px 1px 3px var(--btn-primary-crimson);
 }
 
 .newsletter .btn-cta:hover {
@@ -607,17 +615,17 @@ a:nth-child(3) {
 
 /* Footer section */
 
-.social-links .logo {
+.all-links .logo {
 	align-items: center;
 	display: flex;
 }
 
-.social-links .a {
+.all-links .a {
 	text-decoration: none;
 	color: white;
 }
 
-.social-links .title {
+.all-links .title {
 	display: block;
 	letter-spacing: 0.2em;
 	color: var(--main-navy-blue);
@@ -626,28 +634,69 @@ a:nth-child(3) {
 
 }
 
-.social-links .tittle strong {
-	font-weight: 900;
+.all-links .tittle strong {
+	font-weight: var(--heavy-bold-font);
 }
 
-.social-links small {
+.all-links small {
 	display: block;
 }
 
-.social-links .footer-links {
-	display: block;
-	width: 60vw;
+.all-links .footer-links {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	margin-top: 1em;
 }
 
-.social-links .footer-links a {
+.all-links .footer-site-links {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-content: center;
+	width: 50vw;
+	margin-left: 1em;
+	grid-gap: 1.5em;
+}
+
+.all-links .footer-site-links a {
 	color: var(--main-navy-blue);
 	font-weight: bold;
 	text-decoration: none;
 }
 
-.social-links .footer-link-terms, .footer-link-privacy, .footer-link-contact {
-	display: inline;
+.all-links .footer-site-links > [class^="footer"] {
+	display: grid;
+	align-content: center;
+}
+
+.footer-link-terms {
+	grid-template-columns: 10fr 1fr;
+}
+
+.footer-link-privacy {
+	grid-template-columns: 4fr 1fr;
+}
+
+.footer-link-contact {
+	grid-template-columns: 1fr 1fr;
+}
+
+.footer-links span {
+	display: grid;
+	justify-content: center;
+}
+
+.footer-social-links {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 40vw;
+	margin-left: 5em;
+}
+
+.footer-social-links .fab {
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
 }
 
 
