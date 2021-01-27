@@ -266,7 +266,7 @@ table {
 	border: none;
 }
 
-.container .link:hover .dropdown{
+.container .link:hover .dropdown {
 	visibility: visible;
 	opacity: 1;
 	padding: 1em;
@@ -292,6 +292,13 @@ table {
 	transition: all 0.3s;
 	background: var(--btn-primary-crimson) none repeat scroll 0% 0%;
 }
+
+/* Hamburger menu on mobile */
+.links label, #hamburger-menu {
+	display: none;
+}
+
+/* end of hamburger menu */
 
 .container .link:hover::before {
 	width: 100%;
@@ -688,7 +695,7 @@ a:nth-child(3) {
 	text-decoration: none;
 }
 
-.all-links .footer-site-links > [class^="footer"] {
+.all-links .footer-site-links>[class^="footer"] {
 	display: grid;
 	align-content: center;
 }
@@ -729,23 +736,51 @@ a:nth-child(3) {
 	.container {
 		width: 300px;
 	}
+
 	.container .logo {
 		display: grid;
 	}
+
 	.container .adworld-logo {
 		display: grid;
 		justify-content: center;
 	}
+
 	.container .title {
 		width: 100%;
 	}
+
 	.container .title small {
 		display: inline;
 	}
-	.container .links {
-		width: 550px;
-		visibility: hidden;
+
+	/* Hamburger menu */
+	.links label {
+		display: inline-block;
+		color: white;
+		background: #a02620;
+		font-style: normal;
+		font-size: 1.2em;
+		padding: 10px
+	}
+
+	
+	.dropdown a {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		border-top: 1px solid #333;
+	}
+	
+	.dropdown {
 		display: none;
+	}
+	
+	.links input:checked ~ .link .dropdown {
+		display: block;
+		position: relative;
+		opacity: 1;
+		visibility: visible;
 	}
 }
 
