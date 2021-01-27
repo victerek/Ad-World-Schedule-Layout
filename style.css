@@ -732,7 +732,9 @@ a:nth-child(3) {
 
 /* Responsiveness */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width:1100px) {
+	/* Header section */
+	
 	.container {
 		width: 300px;
 	}
@@ -744,44 +746,59 @@ a:nth-child(3) {
 	.container .adworld-logo {
 		display: grid;
 		justify-content: center;
-	}
-
-	.container .title {
-		width: 100%;
+		width: 10%;
 	}
 
 	.container .title small {
 		display: inline;
 	}
 
-	/* Hamburger menu */
-	.links label {
-		display: inline-block;
-		color: white;
-		background: #a02620;
-		font-style: normal;
-		font-size: 1.2em;
-		padding: 10px
+	.container .links {
+		width: 30%;
 	}
 
-	
-	.dropdown a {
-		box-sizing: border-box;
-		display: block;
-		width: 100%;
-		border-top: 1px solid #333;
-	}
-	
-	.dropdown {
+	.container .title {
 		display: none;
 	}
-	
-	.links input:checked ~ .link .dropdown {
-		display: block;
-		position: relative;
-		opacity: 1;
-		visibility: visible;
+
+	.container .sponsorship {
+		display: none;
 	}
+
+	.container .adworld-link {
+		display: inline-block;
+		width: 50vw;
+	}
+
+	.container .link:hover::before {
+		width: 0;
+	}
+
+	.container .link:hover .dropdown {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 20px;
+		align-items: center;
+	}
+
+	.container .link .dropdown a {
+		display: grid;
+	}
+
+	/* end of Header section */
+	
 }
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+	.container .link .dropdown, .container .link:hover .dropdown {
+		display: block;
+	}
+
+	.container .adworld-link {
+		width: 40vw;
+	}
+
+}
+
 
 /* end Responsiveness */
