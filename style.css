@@ -785,6 +785,85 @@ a:nth-child(3) {
 		display: grid;
 	}
 
+	/* Dropdown animation */
+
+	.dropdown {
+		position: relative;
+		display: none;
+	}
+
+	.adworld-link:hover, .dropdown-menu a {
+		display: block;
+	}
+
+	.dropdown_menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		perspective: 1000px;
+		z-index: -1;
+	}
+
+	.dropdown_menu a {
+		display: none;
+		color: #fff;
+		background-color: #34495e;
+		padding: 10px 20px;
+		font-size: 16px;
+		opacity: 0;
+	}
+
+	@keyframes scaleZ {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+		80% {
+			transform: scale(1.07);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@-moz-keyframes scaleZ {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+		80% {
+			transform: scale(1.07);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.dropdown_menu .dropdown_item-1 {
+		transform-origin: top center;
+		animation: scaleZ 300ms 60ms ease-in-out forwards;
+	}
+
+	.dropdown_menu .dropdown_item-2 {
+		transform-origin: top center;
+		animation: scaleZ 300ms 120ms ease-in-out forwards;
+	}
+
+	.dropdown_menu .dropdown_item-3 {
+		transform-origin: top center;
+		animation: scaleZ 300ms 180ms ease-in-out forwards;
+	}
+
+	.dropdown_menu .dropdown_item-4 {
+		transform-origin: top center;
+		animation: scaleZ 300ms 240ms ease-in-out forwards;
+	}
+
+	/* end of Dropdown animation */
+
 	/* end of Header section */
 
 	.schedule-items {
