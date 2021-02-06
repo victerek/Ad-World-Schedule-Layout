@@ -414,13 +414,11 @@ table {
 	background-color: var(--schedule-light-white);
 }
 
-
 .schedule .day-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	margin: 1em;
 	grid-auto-flow: column;
-	background-color: var(--btn-primary-crimson);
 	width: 90%;
 	font-size: 0.9em;
 }
@@ -440,26 +438,26 @@ table {
 }
 
 .day-wrapper a {
-	color: white;
 	text-decoration: none;
 	font-size: 1.2em;
 	padding: 1em;
 	border: 1px solid #fbcfcf;
 	font-weight: bold;
 	box-shadow: 5px 2px 2px #fbcfcf;
+	background: var(--schedule-light-white);
+	color: #443030;
+	font-weight: var(--medium-bold-font);
+}
+
+.day-wrapper .btn-active {
+	background-color: var(--btn-primary-crimson);
+	color: white;
 }
 
 .day-wrapper a span {
 	display: block;
 	margin-top: 0.2em;
 	font-weight: normal;
-}
-
-.day-wrapper a:nth-child(2),
-a:nth-child(3) {
-	background: var(--schedule-light-white);
-	color: #443030;
-	font-weight: var(--medium-bold-font);
 }
 
 /* end of Schedule days section */
