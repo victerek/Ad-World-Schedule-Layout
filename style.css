@@ -256,6 +256,8 @@ table {
 
 .container .link .dropdown a:nth-child(3) {
 	padding: 0.5em 0.5em;
+	background-color: white;
+	color: var(--btn-primary-crimson);
 }
 
 .container .link .dropdown a:hover {
