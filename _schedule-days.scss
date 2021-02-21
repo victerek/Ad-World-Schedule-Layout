@@ -1,0 +1,58 @@
+// Schedule days wrapper
+
+.schedule {
+  width: 75%;
+  display: grid;
+  align-content: center;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--schedule-light-white);
+
+  .day-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1em;
+    grid-auto-flow: column;
+    width: 90%;
+    font-size: 0.9em;
+  }
+
+  .time-zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    margin-right: 1em;
+    font-weight: bold;
+
+    span {
+      font-weight: normal;
+    }
+  }
+
+  .day-wrapper {
+    a {
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 1em;
+      border: 1px solid #fbcfcf;
+      font-weight: bold;
+      box-shadow: 5px 2px 2px #fbcfcf;
+      background: var(--schedule-light-white);
+      color: #443030;
+      font-weight: var(--medium-bold-font);
+    }
+
+    .btn-active {
+      background-color: var(--btn-primary-crimson);
+      color: white;
+    }
+
+    a span {
+      display: block;
+      margin-top: 0.2em;
+      font-weight: normal;
+    }
+  }
+}

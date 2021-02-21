@@ -1,0 +1,64 @@
+.schedule-items {
+  width: 90%;
+  display: grid;
+  align-content: center;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  h2 {
+    text-align: center;
+    margin: 1.5em;
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .talk-item {
+    margin: 0.5em;
+    padding: 0.7em;
+    border: 1px solid var(--schedule-navy-blue);
+  }
+
+  .talk-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+  }
+
+  .talk-item {
+    span {
+      display: inline;
+    }
+
+    h4 {
+      width: 14em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      color: var(--schedule-navy-blue);
+    }
+
+    .schedule-tag {
+      color: var(--schedule-navy-blue);
+      margin-top: 0.2em;
+    }
+
+    .speaker-discipline {
+      background-color: rgb(173, 173, 224);
+      font-weight: bold;
+      margin-top: .5em;
+    }
+
+    .speaker {
+      display: inline;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

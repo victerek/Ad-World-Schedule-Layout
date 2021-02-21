@@ -1,0 +1,186 @@
+/* Responsiveness */
+
+@media screen and (max-width: 1100px) {
+  /* Header section */
+
+  .container {
+    width: 300px;
+
+    .adworld-logo {
+      display: grid;
+      justify-content: center;
+      width: 10%;
+    }
+
+    .title small {
+      display: inline;
+    }
+
+    .links {
+      width: 30%;
+    }
+
+    .title, .sponsorship {
+      display: none;
+    }
+
+    .adworld-link {
+      display: inline-block;
+      width: 50vw;
+    }
+
+    .link {
+      &:hover {
+        &::before {
+          width: 0;
+        }
+
+        .dropdown {
+          display: grid;
+          column-gap: 20px;
+          align-items: center;
+        }
+      }
+
+      .dropdown a, .dropdown-menu:active {
+        display: grid;
+      }
+    }
+  }
+
+  .dropdown-menu:focus {
+    display: grid;
+  }
+
+  /* end of Header section */
+
+  .schedule-items {
+    grid-template-columns: 1fr 1fr;
+
+    .talk-info {
+      grid-template-columns: initial;
+    }
+
+    .schedule-tag {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1099px) {
+  .container {
+    .sponsorship {
+      display: inline-block;
+    }
+
+    .links .dropdown {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .schedule .day-wrapper {
+    grid-template-columns: 100px 100px 100px;
+  }
+
+  .schedule-items {
+    grid-template-columns: 1fr;
+  }
+
+  /* dropdown animation */
+
+  .dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 6s ease-in;
+    max-height: 400px;
+    overflow: visible;
+
+    a:hover {
+      max-height: 400px;
+      overflow: visible;
+    }
+  }
+
+  /* Newsletter */
+
+  .newsletter {
+    height: auto;
+    font-size: 1em;
+
+    article p {
+      width: 75%;
+    }
+
+    .form-field {
+      width: auto;
+    }
+
+    .btn-cta {
+      width: 50%;
+      margin-bottom: 1em;
+    }
+
+    &::before, &::after {
+      position: relative;
+      display: none;
+    }
+  }
+
+  /* Footer */
+
+  .all-links {
+    .logo {
+      margin-bottom: 1em;
+    }
+
+    .footer-links {
+      display: block;
+    }
+
+    .footer-site-links {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+  }
+
+  .footer-social-links {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .container {
+    .link {
+      .dropdown, &:hover .dropdown {
+        display: block;
+      }
+    }
+
+    .adworld-link {
+      width: 40vw;
+    }
+  }
+
+  .schedule {
+    width: 100%;
+  }
+
+  .talk-item h4 {
+    width: 18em;
+  }
+}
+
+@media screen and (min-width: 629px) and (max-width: 740px) {
+  .schedule-items {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .schedule-hero p {
+    max-width: 500px;
+  }
+}
+
+/* end Responsiveness */
